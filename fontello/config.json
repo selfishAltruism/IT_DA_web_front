@@ -1,0 +1,82 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "3a900d0e9f43f5409211f62bec557379",
+      "css": "emo-beer",
+      "code": 59403,
+      "src": "fontelico"
+    },
+    {
+      "uid": "142263941b9f4cd4b2b84f1f4cd13b1d",
+      "css": "emo-thumbsup",
+      "code": 59396,
+      "src": "fontelico"
+    },
+    {
+      "uid": "68e298ff2d8b25dd7f647ed64f5ae690",
+      "css": "emo-surprised",
+      "code": 59398,
+      "src": "fontelico"
+    },
+    {
+      "uid": "794d73c3a5fcf710265679700e470578",
+      "css": "pin",
+      "code": 59392,
+      "src": "iconic"
+    },
+    {
+      "uid": "c8585e1e5b0467f28b70bce765d5840c",
+      "css": "docs",
+      "code": 61637,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "36c667650817d62f4e8089280ea49774",
+      "css": "down-hand",
+      "code": 59393,
+      "src": "elusive"
+    },
+    {
+      "uid": "8216d5211b81d2a7344e2b7d76d019b0",
+      "css": "left-hand",
+      "code": 59394,
+      "src": "elusive"
+    },
+    {
+      "uid": "c38baded20e83769843f48fbbfab5db3",
+      "css": "right-hand",
+      "code": 59395,
+      "src": "elusive"
+    },
+    {
+      "uid": "86cc7238838f8a1d9d442ee34120c78e",
+      "css": "up-hand",
+      "code": 59397,
+      "src": "elusive"
+    },
+    {
+      "uid": "bcbb9470c9ba0699d5a0e4e97b3d5be9",
+      "css": "glass",
+      "code": 59399,
+      "src": "elusive"
+    },
+    {
+      "uid": "cf772d9d1eca484c9772a98045dd39d6",
+      "css": "target",
+      "code": 59400,
+      "src": "elusive"
+    },
+    {
+      "uid": "38575a803c4da31ce20d77e1e1236bcb",
+      "css": "paper-plane",
+      "code": 61912,
+      "src": "fontawesome"
+    }
+  ]
+}

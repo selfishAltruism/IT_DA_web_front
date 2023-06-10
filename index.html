@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카페 잇다</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="a_TrT_icon.ico" />
+    <link rel="stylesheet" href="./fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="jquery.js"></script>
+  </head>
+
+  <body style="overflow-x: auto; overflow-y: auto">
+    <div id="logo">
+      <div id="logoLine"></div>
+      <a href="index.html" title="카페의 좌석확인을 실시간으로-" target="self">
+        <div id="nameLogo">&nbsp;&nbsp;카페 잇다&nbsp;&nbsp;</div>
+      </a>
+      <div id="signIn">Sign In</div>
+      <a href="sign up.1.0.0.html" title="카페 잇다 sign in" target="self">
+        <div id="signUp">Sign Up</div>
+      </a>
+    </div>
+
+    <div id="mainAD">
+      <span id="scriptAD1"
+        >추운 겨울, 헤맴없이 바로.<br />카페 잇다로 한눈에 카페 좌석 확인.</span
+      >
+      <div id="search">
+        카페명 혹은 지역 지역명 검색_<input
+          id="search1"
+          name="search"
+          value=""
+        />
+      </div>
+    </div>
+
+    <div id="title1">
+      <div id="title11">실시간좌석</div>
+    </div>
+
+    <div id="seatBlock"></div>
+
+    <div class="container">
+      <iframe id="town" src="cauMain.1.0.0.html" scrolling="yes" frameborder="0"
+        >해당 브라우저는 iframe을 지원하지 않습니다.</iframe
+      >
+      <iframe id="town" src="kuMain.1.0.0.html" scrolling="yes" frameborder="0"
+        >해당 브라우저는 iframe을 지원하지 않습니다.</iframe
+      >
+    </div>
+
+    <script>
+      var lastScrollTop = 0;
+
+      $(window).scroll(function () {
+        var st = $(this).scrollTop();
+
+        if (st > lastScrollTop) {
+        } else {
+        }
+        lastScrollTop = st;
+      });
+    </script>
+  </body>
+</html>

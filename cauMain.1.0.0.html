@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+      var scroll;
+
+      function startScroll(interval) {
+        scroll = setInterval("autoScroll()", interval);
+      }
+
+      function stopScroll() {
+        clearInterval(scroll);
+      }
+
+      function autoScroll() {
+        window.scrollBy(2, 0); // 10픽셀 위로 스크롤
+      }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="townMain.css" />
+
+    <style type="text/css">
+      #nameTown {
+        background-color: rgba(1, 116, 183, 1);
+      }
+    </style>
+  </head>
+  <!-- onload="startScroll(40)" onmouseover="stopScroll()" onmouseout="startScroll(40)" -->
+  <body style="overflow-x: auto; overflow-y: hidden">
+    <div id="nameTown">중<br />앙<br />대<br />후<br />문</div>
+
+    <div class="container">
+      <div class="mainInfo">
+        <a
+          href="sub.1.0.0.html"
+          title="컴 오브 컴포트의 세부정보"
+          target="self"
+        >
+          <img
+            src="./컵 오브 컴포트/컵 오브 컴포트 대표 이미지.png"
+            alt="컵 오브 컴포트 대표 이미지"
+          />
+          <div class="Info">
+            <span class="title">컴 오브 컴포트 </span>빈 좌석:3<br /><span
+              class="Ad1"
+              >"최선의 좌석, 최고의 커피. 공부 하기 위해 당장 여기"</span
+            >
+          </div>
+        </a>
+        <svg>
+          <circle
+            cx="33"
+            cy="33"
+            r="30"
+            fill="rgb(220,0,0)"
+            stroke="rgb(255,0,0)"
+            stroke-width="3"
+          />
+        </svg>
+      </div>
+
+      <div class="mainInfo">
+        <a href="sub.1.0.0.html" title="빅컵의 세부정보" target="self">
+          <img src="./빅컵/대표 이미지.PNG" alt="빅컵 대표 이미지" />
+          <div class="Info">
+            <span class="title">빅컵 </span>빈 좌석:5<br /><span class="Ad1"
+              >"공부와 수다. 두마리의 토끼를 잡다."</span
+            >
+          </div>
+        </a>
+        <svg>
+          <circle
+            cx="33"
+            cy="33"
+            r="30"
+            fill="rgb(220,220,0)"
+            stroke="rgb(255,255,0)"
+            stroke-width="3"
+          />
+        </svg>
+      </div>
+
+      <div class="mainInfo">
+        <a href="sub.1.0.0.html" title="엔젤의 세부정보" target="self">
+          <img src="./엔젤리너스 건입점/대표 이미지.jfif" alt="엔젤 이미지" />
+          <div class="Info">
+            <span class="title">엔젤리너스 </span>빈 좌석:6<br /><span
+              class="Ad1"
+              >"3층의 대규모 스터디 공간."</span
+            >
+          </div>
+        </a>
+        <svg>
+          <circle
+            cx="33"
+            cy="33"
+            r="30"
+            fill="rgb(220,220,0)"
+            stroke="rgb(255,255,0)"
+            stroke-width="3"
+          />
+        </svg>
+      </div>
+
+      <div class="mainInfo">
+        <a href="sub.1.0.0.html" title="커피나무의 세부정보" target="self">
+          <img
+            src="./커피나무 건입점/대표 이미지.PNG"
+            alt="커피나무 대표 이미지"
+          />
+          <div class="Info">
+            <span class="title">커피나무 </span>빈 좌석:10<br /><span
+              class="Ad1"
+              >"새로운 분위기의 카페. 고민없이 찾아오세요"</span
+            >
+          </div>
+        </a>
+        <svg>
+          <circle
+            cx="33"
+            cy="33"
+            r="30"
+            fill="rgb(0,220,0)"
+            stroke="rgb(0,255,0)"
+            stroke-width="3"
+          />
+        </svg>
+      </div>
+
+      <div id="pointBlock"></div>
+    </div>
+    <script type="text/javascript"></script>
+  </body>
+</html>

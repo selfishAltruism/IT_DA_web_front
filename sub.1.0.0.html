@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카페 잇다</title>
+    <meta charset="utf-8" />
+    <script src="jquery.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="a_TrT_icon.ico" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="sub.css" />
+  </head>
+
+  <body>
+    <a href="index.html" title="카페의 좌석확인을 실시간으로-" target="self">
+      <div id="nameLogo">&nbsp;&nbsp;카페 잇다&nbsp;&nbsp;</div>
+    </a>
+
+    <div id="background"></div>
+
+    <div id="logo">
+      <div id="signIn">Sign In</div>
+      <div id="signUp">Sign Up</div>
+    </div>
+
+    <div id="name">컵 오브 컴포트</div>
+
+    <iframe id="mainImg" src="subsub.1.0.0.html" frameborder="0"
+      >해당 브라우저는 iframe을 지원하지 않습니다.</iframe
+    >
+
+    <div id="infoBlock"></div>
+
+    <div class="container1">
+      <span class="title">카페 위치</span>
+      <div id="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.243510106994!2d126.94656311530967!3d37.502174479809995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f4de5dfb6c9%3A0xdc8710ef5ddd4d71!2z7Lu1IOyYpOu4jCDsu7Ttj6ztirgoQSBDVVAgT0YgQ09NRk9SVCk!5e0!3m2!1sko!2skr!4v1629034652361!5m2!1sko!2skr"
+          height="350px"
+          width="350px"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        >
+          해당 브라우저는 iframe을 지원하지 않습니다.
+        </iframe>
+      </div>
+    </div>
+
+    <div id="seat1"></div>
+    <div id="seat2"></div>
+    <div id="seat3"></div>
+    <div id="seat4"></div>
+    <div class="container2">
+      <span class="title">실시간 카페 좌석 현황</span>
+      <img id="baseImg" src="./컵 오브 컴포트/전계도 예시1.PNG" />
+      <img id="floorPlanImg" src="./컵 오브 컴포트/전계도 예시2.png" />
+    </div>
+
+    <div class="container3">
+      <span class="title">커피 정보</span>
+      <span class="title1">| 케냐 AA Top |<br />균형잡힌 밸런스의 향과 맛</span>
+      <img id="coffInfo" src="./컵 오브 컴포트/커피 설명.PNG" />
+    </div>
+
+    <div class="container4">
+      <span class="titlee">앉은 그자리에서! 음료 결제</span>
+      <img id="menuImg" src="./컵 오브 컴포트/메뉴 1.PNG" />
+    </div>
+
+    <script>
+      fetch(
+        "https://opensheet.vercel.app/1tqkA0Q9BUwXQIK3BHQo7kVC6z-Sd929JQxL9fdcLQ6Q/시트1"
+      )
+        .then((res) => res.text())
+        .then((text) => {
+          const json = JSON.parse(text);
+          console.log(json);
+          console.log(json[0]["상태"]);
+          if (json[0]["상태"] == 0) {
+            $("#seat1").css("background-image", "none");
+            $("#seat2").css("background-image", "none");
+            $("#seat3").css("background-image", "none");
+            $("#seat4").css("background-image", "none");
+          } else if (json[0]["상태"] == 1) {
+            $("#seat1").css(
+              "background-image",
+              'url("./컵\ 오브\ 컴포트/좌석1.PNG")'
+            );
+            $("#seat2").css(
+              "background-image",
+              'url("./컵\ 오브\ 컴포트/좌석1.PNG")'
+            );
+            $("#seat3").css(
+              "background-image",
+              'url("./컵\ 오브\ 컴포트/좌석2.PNG")'
+            );
+            $("#seat4").css(
+              "background-image",
+              'url("./컵\ 오브\ 컴포트/좌석2.PNG")'
+            );
+          }
+        });
+
+      var lastScrollTop = 0;
+      var windowWidth = $(window).width();
+
+      $(window).scroll(function () {
+        var st = $(this).scrollTop();
+        if (windowWidth > 425) {
+          if (st > 435) {
+            $("a").css("position", "absolute");
+            $("a").css("top", 450);
+
+            $("#name").css("border-bottom", "6px solid black");
+          } else {
+            $("a").css("position", "fixed");
+            $("a").css("top", 15);
+
+            $("#name").css("border", "0px");
+          }
+          if (st > 515) {
+            $("#name").css("position", "fixed");
+            $("#name").css("top", 15);
+
+            $("#name").css("border", "3px solid rgba(17,88,90,1.0)");
+
+            $("#name").css("border-bottom-left-radius", "0px");
+            $("#name").css("border-bottom-right-radius", "0px");
+          } else {
+            $("#name").css("position", "absolute");
+            $("#name").css("top", 530);
+
+            $("#name").css("border-top", "0px");
+            $("#name").css("border-left", "0px");
+            $("#name").css("border-right", "0px");
+
+            $("#name").css("border-bottom-left-radius", "6px");
+            $("#name").css("border-bottom-right-radius", "6px");
+          }
+        }
+        if (st > lastScrollTop) {
+        } else {
+        }
+        lastScrollTop = st;
+      });
+    </script>
+  </body>
+</html>

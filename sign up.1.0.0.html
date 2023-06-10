@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카페 잇다</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="a_TrT_icon.ico" />
+    <link rel="stylesheet" href="./fontello/css/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="sign up.css" />
+    <script src="jquery.js"></script>
+  </head>
+
+  <body style="overflow-x: auto; overflow-y: auto">
+    <div id="logo">
+      <div id="logoLine"></div>
+      <a href="index.html" title="카페의 좌석확인을 실시간으로-" target="self">
+        <div id="nameLogo">&nbsp;&nbsp;카페 잇다&nbsp;&nbsp;</div>
+      </a>
+      <a href="sign in.html" title="카페 잇다 sign in" target="self">
+        <div id="signIn">Sign In</div>
+      </a>
+      <div id="signUp">Sign Up</div>
+    </div>
+
+    <script>
+      var lastScrollTop = 0;
+      $(window).scroll(function () {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+        } else {
+        }
+        lastScrollTop = st;
+      });
+    </script>
+  </body>
+</html>

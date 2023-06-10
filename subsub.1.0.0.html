@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var scroll;
+
+		function startScroll(interval) {
+   			scroll = setInterval("autoScroll()", interval);	
+		}
+
+		function stopScroll(){
+			clearInterval(scroll);
+		}
+
+		function autoScroll() {
+		    window.scrollBy(1,0); // 10픽셀 위로 스크롤
+		}
+	</script>
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&display=swap');
+		
+		*{
+			font-family: 'Black Han Sans', sans-serif;
+			text-align: center;
+			margin: 0px;
+			margin-right: 5px;
+
+		}
+
+		::-webkit-scrollbar { 
+			width: 10px;
+ 			height: 10px;
+		}
+
+		::-webkit-scrollbar-thumb { 
+		background-color: rgba(150,150,150,1.0);
+		border-radius: 3px;
+		background-clip: padding-box;
+		border: 2px solid transparent;
+		} 
+
+		::-webkit-scrollbar-track { 
+		display: none;
+		}
+		
+		.container{
+			display: flex;
+		}
+		img{
+			background-color: white;
+			height: 395px;
+		}
+	</style>
+</head>
+
+<body style= "overflow-x:auto;overflow-y:hidden" onload="startScroll(40)" onmouseover="stopScroll()" onmouseout="startScroll(40)">
+	<div class="container">
+		<div class="mainImg">
+				<img src="./컵 오브 컴포트/컵 오브 컴포트 이미지 1.png" alt="컵 오브 컴포트 이미지">
+		</div>
+
+		<div class="mainImg">
+				<img src="./컵 오브 컴포트/컵 오브 컴포트 이미지 2.png" alt="컵 오브 컴포트 이미지">
+		</div>
+
+		<div class="mainImg">
+				<img src="./컵 오브 컴포트/컵 오브 컴포트 이미지 3.png" alt="컵 오브 컴포트 이미지">
+		</div>
+
+		<div class="mainImg">
+				<img src="./컵 오브 컴포트/컵 오브 컴포트 이미지 4.png" alt="컵 오브 컴포트 이미지">
+		</div>
+
+		<div class="mainImg">
+				<img src="./컵 오브 컴포트/컵 오브 컴포트 이미지 1.png" alt="컵 오브 컴포트 이미지">
+		</div>
+
+		<div class="mainImg">
+				<img src="./컵 오브 컴포트/컵 오브 컴포트 이미지 2.png" alt="컵 오브 컴포트 이미지">
+		</div>
+
+		<div class="mainImg">
+				<img src="./컵 오브 컴포트/컵 오브 컴포트 이미지 3.png" alt="컵 오브 컴포트 이미지">
+		</div>
+
+		<div class="mainImg">
+				<img src="./컵 오브 컴포트/컵 오브 컴포트 이미지 4.png" alt="컵 오브 컴포트 이미지">
+		</div>
+	</div>
+</body>
+</html>
